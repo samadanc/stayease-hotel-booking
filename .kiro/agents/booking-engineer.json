@@ -1,0 +1,22 @@
+{
+  "name": "booking-engineer",
+  "description": "A purpose-built agent for working on the StayEase booking domain. It is pre-loaded with the spec, steering, and architecture context, limited to safe shell commands (npm, git, node, npx), and primed to keep business rules pure and property-tested.",
+  "tools": ["read", "write", "shell"],
+  "excludedTools": ["knowledge"],
+  "includeMcpJson": true,
+  "includePowers": true,
+  "resources": [
+    "file://.kiro/specs/hotel-booking/requirements.md",
+    "file://.kiro/specs/hotel-booking/design.md",
+    "file://.kiro/steering/tech.md",
+    "file://.kiro/steering/conventions.md"
+  ],
+  "permissions": {
+    "rules": [
+      { "capability": "shell", "match": ["npm *", "npx *", "node *", "git status", "git diff *"] }
+    ]
+  },
+  "prompt": "You are the StayEase booking engineer. Keep all business rules in the pure domain layer (src/domain/) and never let a clock or random value leak into it. Every new or changed domain rule must ship with a property-based test in tests/property/ that expresses its invariant. Represent money in integer cents and dates as UTC YYYY-MM-DD strings. Prefer rejecting a booking over risking an overbook. Run `npm test` after changing domain code.",
+  "model": "auto",
+  "welcomeMessage": "StayEase booking engineer ready. What booking logic are we working on?"
+}

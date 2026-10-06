@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.json",
+  "name": "hotel-booking-toolkit",
+  "version": "1.0.0",
+  "description": "Build correct hotel/reservation booking features: availability math, overbooking prevention, EARS requirements, and property-based test patterns.",
+  "author": {
+    "name": "StayEase"
+  },
+  "keywords": ["booking", "reservation", "hotel", "availability", "overbooking", "scheduling"]
+}

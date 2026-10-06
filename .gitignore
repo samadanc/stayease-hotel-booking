@@ -1,0 +1,24 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Playwright
+/test-results/
+/playwright-report/
+/.playwright-mcp/
+/blob-report/
+/playwright/.cache/
+
+# Challenge source material (not part of the build)
+challenge.pdf
+submission_guidelines.pdf
+
+# Personal submission instructions / content to act on privately.
+# These are guides for the author, not part of the project the judges score.
+# docs/MCP.md is intentionally kept (it documents Lesson 6 and is linked from the README).
+docs/SUBMISSION.md
+docs/GIT_SETUP.md
+docs/VIDEO_SCRIPT.md
+docs/SOCIAL_POST.md
+docs/screenshot-booking-confirmed.png

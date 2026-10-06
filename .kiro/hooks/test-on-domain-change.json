@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Test domain on change",
+      "description": "When any pure domain file changes, re-run the unit and property-based tests so a broken invariant (e.g. overbooking) is caught right away.",
+      "trigger": "PostFileSave",
+      "matcher": "src/domain/.*\\.ts$",
+      "action": {
+        "type": "command",
+        "command": "npm test"
+      }
+    }
+  ]
+}

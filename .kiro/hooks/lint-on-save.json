@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Lint on save",
+      "description": "Runs ESLint whenever the agent saves or edits a TypeScript source file, so style and type-safety issues surface immediately.",
+      "trigger": "PostFileSave",
+      "matcher": "src/.*\\.ts$",
+      "action": {
+        "type": "command",
+        "command": "npx eslint ${file}"
+      }
+    }
+  ]
+}
